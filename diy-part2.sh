@@ -57,3 +57,6 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
 
 sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
+
+./scripts/feeds update -a
+./scripts/feeds install -a
